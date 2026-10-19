@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IELTS Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sky1:#86ccee;--sky2:#eaf7fe;--ink:#0b2545;--mute:#42597a;--card:rgba(255,255,255,.82);--line:rgba(11,37,69,.14);--amber:#ffb52e;--teal:#0b8f8f;--plane:#fff;--pstroke:#0b2545;--cloud:rgba(255,255,255,.85);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sky1:#081833;--sky2:#17365f;--ink:#eaf3ff;--mute:#a9bfdc;--card:rgba(12,30,60,.74);--line:rgba(234,243,255,.18);--teal:#4fd1c5;--cloud:rgba(180,205,240,.16);color-scheme:dark}}
+:root[data-theme="dark"]{--sky1:#081833;--sky2:#17365f;--ink:#eaf3ff;--mute:#a9bfdc;--card:rgba(12,30,60,.74);--line:rgba(234,243,255,.18);--teal:#4fd1c5;--cloud:rgba(180,205,240,.16);color-scheme:dark}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font:400 17px/1.6 Figtree,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--sky1),var(--sky2) 45%,var(--sky1))}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.08;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.6rem,6.4vw,5rem);font-weight:800}
+h2{font-size:clamp(2rem,4.2vw,3.2rem);font-weight:700}
+h3{font-size:1.35rem;font-weight:700}
+p{margin:0}a{color:inherit}
+#page{position:relative;overflow:hidden}
+.w{width:min(1100px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{padding:96px 0}
+.lead{color:var(--mute);max-width:56ch;margin-top:16px}
+.btn{display:inline-block;border:0;border-radius:999px;padding:14px 26px;font:600 1rem Figtree,sans-serif;background:var(--amber);color:#0b2545;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,181,46,.45)}
+.btn.o{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+/* clouds */
+.cl{position:absolute;left:0;z-index:0;width:240px;height:64px;border-radius:64px;background:var(--cloud);filter:blur(1px);will-change:transform}
+.cl:before,.cl:after{content:"";position:absolute;background:inherit;border-radius:50%}
+.cl:before{width:100px;height:100px;left:36px;top:-44px}.cl:after{width:76px;height:76px;left:122px;top:-30px}
+/* nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.logo{display:flex;align-items:center;gap:10px;font:800 1.25rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+.logo i{width:38px;height:38px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
+.logo svg{width:20px;fill:var(--amber)}
+.nl{display:flex;gap:26px;align-items:center}.nl a{text-decoration:none;font-weight:500}
+.nl .btn{padding:10px 20px}
+@media(max-width:760px){.nl a:not(.btn){display:none}}
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:56px 0 80px}
+.hero .lead{font-size:1.15rem}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.pass{background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:24px;border:1px solid var(--line);transform:rotate(-2.5deg);box-shadow:0 30px 60px rgba(11,37,69,.22);position:relative}
+.pass .top{padding:24px 26px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px dashed var(--line);font-weight:600}
+.pass .top b{font:800 1.1rem "Bricolage Grotesque",sans-serif}
+.pass:before,.pass:after{content:"";position:absolute;top:66px;width:26px;height:26px;border-radius:50%;background:var(--sky2)}
+.pass:before{left:-13px}.pass:after{right:-13px}
+.pass .bd{padding:22px 26px 26px}
+.rt{display:flex;align-items:center;gap:12px;justify-content:space-between}
+.rt div{font:800 2.4rem "Bricolage Grotesque",sans-serif}.rt small{display:block;font:500 .8rem Figtree,sans-serif;color:var(--mute)}
+.rt hr{flex:1;border:0;border-top:2px dotted var(--mute);margin:0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 14px}
+.chips button{border:0;border-radius:12px;padding:8px 14px;font:600 .95rem Figtree,sans-serif;background:var(--line);color:var(--ink);cursor:pointer;transition:background .2s,transform .2s}
+.chips button[aria-pressed=true]{background:var(--amber);color:#0b2545;transform:translateY(-2px)}
+.bc{height:38px;margin-top:16px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 6px,transparent 6px 11px)}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.st{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:20px;padding:26px;border:1px solid var(--line)}
+.st b{display:block;font:800 3.2rem/1 "Bricolage Grotesque",sans-serif}
+.st span{color:var(--mute)}
+/* skills */
+.sk{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+@media(max-width:700px){.sk{grid-template-columns:1fr}}
+.sk>div{border-radius:26px;padding:32px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.sk>div:nth-child(1){background:var(--ink);color:var(--sky2)}
+.sk>div:nth-child(2){background:var(--amber);color:#0b2545}
+.sk>div:nth-child(3){background:var(--teal);color:#fff}
+.sk>div:nth-child(4){background:var(--card);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+:root[data-theme="dark"] .sk>div:nth-child(1),:root:not([data-theme="light"]) .sk>div:nth-child(1){}
+.sk h3{font-size:2rem}.sk p{max-width:34ch;opacity:.92}
+/* journey */
+.jr{list-style:none;margin:44px 0 0;padding:0;max-width:640px}
+.jr li{display:grid;grid-template-columns:52px 1fr;gap:18px;padding-bottom:30px;position:relative}
+.jr li:not(:last-child):before{content:"";position:absolute;left:25px;top:52px;bottom:4px;border-left:2px dashed var(--mute)}
+.jr i{width:52px;height:52px;border-radius:50%;background:var(--ink);color:var(--amber);display:grid;place-items:center;font:800 1.2rem "Bricolage Grotesque",sans-serif;font-style:normal}
+.jr p{color:var(--mute)}
+/* batches */
+.bt{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:40px;align-items:stretch}
+.bt>div{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px}
+.bt .pop{border:3px solid var(--amber);transform:translateY(-10px)}
+.bt ul{margin:0 0 8px;padding-left:20px;color:var(--mute)}
+.bt .btn{margin-top:auto;text-align:center}
+.tag{align-self:flex-start;background:var(--amber);color:#0b2545;font-weight:600;font-size:.85rem;padding:3px 12px;border-radius:999px}
+/* quotes */
+.qs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:40px}
+.qs blockquote{margin:0;background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:22px;padding:28px}
+.qs blockquote:nth-child(2){margin-top:26px}
+.qs footer{margin-top:16px;font-weight:600}.qs footer span{display:block;font-weight:400;color:var(--mute);font-size:.92rem}
+/* contact */
+.ct{background:var(--ink);color:#eaf3ff;border-radius:32px;padding:clamp(28px,5vw,60px);display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:800px){.ct{grid-template-columns:1fr}}
+.ct .lead{color:#b8cce8}
+form{display:grid;gap:12px}
+input,select{width:100%;padding:14px 16px;border-radius:14px;border:2px solid transparent;font:500 1rem Figtree,sans-serif;background:#fff;color:#0b2545}
+#ok{min-height:1.5em;color:var(--amber);font-weight:600}
+.ft{padding:30px 0 50px;color:var(--mute);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.95rem}
+/* plane */
+#fly{position:absolute;inset:0;z-index:3;pointer-events:none}
+#plane{position:absolute;left:0;top:0;width:62px;height:62px;margin:-31px 0 0 -31px;filter:drop-shadow(0 12px 8px rgba(0,0,0,.28));will-change:transform}
+#plane svg{width:100%;height:100%;fill:var(--plane);stroke:var(--pstroke);stroke-width:2.2;stroke-linejoin:round}
+@media(max-width:700px){#plane{width:44px;height:44px;margin:-22px 0 0 -22px}}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}@keyframes rise{from{opacity:0;transform:translateY(30px)}}}
+</style>
+</head>
+<body>
+<div id="page">
+<div class="cl" style="top:140px" data-s=".35"></div>
+<div class="cl" style="top:760px;transform:scale(1.3)" data-s="-.25"></div>
+<div class="cl" style="top:1500px" data-s=".45"></div>
+<div class="cl" style="top:2400px;transform:scale(1.5)" data-s="-.3"></div>
+<div class="cl" style="top:3300px" data-s=".4"></div>
+<svg id="fly" aria-hidden="true"><path id="rest" fill="none" stroke="var(--ink)" stroke-opacity=".35" stroke-width="3" stroke-dasharray="3 14" stroke-linecap="round"/><path id="done" fill="none" stroke="var(--amber)" stroke-width="4" stroke-linecap="round"/></svg>
+<div id="plane" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M61 32 38 26 24 5h-6l8 21H10L6 18H2l3 14-3 14h4l4-8h16l-8 21h6l14-21Z"/></svg></div>
+
+<div class="w">
+<nav>
+<a class="logo" href="#top"><i><svg viewBox="0 0 64 64"><path d="M61 32 38 26 24 5h-6l8 21H10L6 18H2l3 14-3 14h4l4-8h16l-8 21h6l14-21Z"/></svg></i><span data-c="name"></span></a>
+<div class="nl"><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#batches">Batches</a><a href="#contact" class="btn">Free mock test</a></div>
+</nav>
+<header class="hero" id="top">
+<div>
+<h1>Your Band 7+ flight is now boarding.</h1>
+<p class="lead">Small batches, weekly mock tests and one-to-one speaking feedback from certified IELTS trainers. Study in the UK, Canada, Australia or anywhere you plan to go.</p>
+<div class="cta"><a class="btn" href="#contact">Book a free mock test</a><a class="btn o" href="#journey">See how it works</a></div>
+</div>
+<div class="pass" aria-label="Your target band">
+<div class="top"><b data-c="name"></b><span>IELTS Express</span></div>
+<div class="bd">
+<div class="rt"><div>5.5<small>Today</small></div><hr><div id="tb">7.0<small>Target band</small></div></div>
+<div class="chips" role="group" aria-label="Choose your target band"></div>
+<p>Typical preparation time: <b id="wk">8–10 weeks</b></p>
+<div class="bc"></div>
+</div>
+</div>
+</header>
+
+<div class="stats">
+<div class="st"><b data-n="4500" data-x="+">0</b><span>students coached</span></div>
+<div class="st"><b data-n="7.3" data-d="1">0</b><span>average overall band</span></div>
+<div class="st"><b data-n="92" data-x="%">0</b><span>reached their target band</span></div>
+<div class="st"><b data-n="12" data-x="+">0</b><span>years of experience</span></div>
+</div>
+
+<section id="skills">
+<h2>Four skills. One plan for each.</h2>
+<p class="lead">We train every part of the exam with real test-style material, then fix your weak spots first.</p>
+<div class="sk">
+<div><h3>Listening</h3><p>Audio drills in British, Australian and Canadian accents, plus a tracker for the trick questions you keep missing.</p></div>
+<div><h3>Reading</h3><p>Skimming, scanning and time control so you finish all 40 questions in 60 minutes.</p></div>
+<div><h3>Writing</h3><p>Task 1 and Task 2 essays marked within 48 hours against the official band descriptors.</p></div>
+<div><h3>Speaking</h3><p>Weekly mock interviews with a trainer, and feedback on fluency, vocabulary and pronunciation.</p></div>
+</div>
+</section>
+
+<section id="journey">
+<h2>From first test to exam day</h2>
+<p class="lead">Every student follows the same clear route, adjusted to their target.</p>
+<ol class="jr">
+<li><i>1</i><div><h3>Free diagnostic test</h3><p>A full mock exam shows your current band in each skill.</p></div></li>
+<li><i>2</i><div><h3>Personal study plan</h3><p>Your trainer maps weekly goals to your exam date.</p></div></li>
+<li><i>3</i><div><h3>Live classes and daily practice</h3><p>Small groups, homework with feedback, and a doubt-clearing chat.</p></div></li>
+<li><i>4</i><div><h3>Full-length mock tests</h3><p>Computer or paper based, scored the same way as the real exam.</p></div></li>
+<li><i>5</i><div><h3>Exam-week polish</h3><p>Last-minute strategy, test booking help and a calm landing.</p></div></li>
+</ol>
+</section>
+
+<section id="batches">
+<h2>Pick the batch that fits your date</h2>
+<div class="bt">
+<div><h3>Fast Track</h3><p>4 weeks, for students with an exam booked soon.</p><ul><li>Daily live classes</li><li>3 full mock tests</li><li>Writing feedback</li></ul><a class="btn o" href="#contact">Reserve a seat</a></div>
+<div class="pop"><span class="tag">Most popular</span><h3>Standard</h3><p>8 weeks, the steady route to a higher band.</p><ul><li>5 classes a week</li><li>Weekly mock tests</li><li>Weekly speaking interview</li></ul><a class="btn" href="#contact">Reserve a seat</a></div>
+<div><h3>One-to-One</h3><p>Flexible timing with a dedicated trainer.</p><ul><li>Your own schedule</li><li>Custom study plan</li><li>Unlimited doubt support</li></ul><a class="btn o" href="#contact">Reserve a seat</a></div>
+</div>
+</section>
+
+<section id="results">
+<h2>Students who have landed</h2>
+<div class="qs">
+<blockquote>"I went from 6.0 to 7.5 in eight weeks. The writing feedback changed everything."<footer>Aarav M.<span>Band 7.5, Canada study visa</span></footer></blockquote>
+<blockquote>"The mock tests felt harder than the real exam, so test day felt easy."<footer>Sara K.<span>Band 8.0, UK university</span></footer></blockquote>
+<blockquote>"Speaking was my fear. Weekly interviews made me confident."<footer>Daniel R.<span>Band 7.0, Australia PR</span></footer></blockquote>
+</div>
+</section>
+
+<section id="contact">
+<div class="ct">
+<div><h2>Reserve your seat on the next batch</h2><p class="lead">Take a free mock test and get your band report within 24 hours. No payment needed.</p>
+<p style="margin-top:24px"><span data-c="phone"></span><br><span data-c="email"></span><br><span data-c="address"></span></p></div>
+<form id="f"><input required placeholder="Your name" aria-label="Your name"><input required type="tel" placeholder="Phone number" aria-label="Phone number"><select aria-label="Target band"><option>Target band 6.0</option><option>Target band 6.5</option><option selected>Target band 7.0</option><option>Target band 7.5</option><option>Target band 8.0+</option></select><button class="btn">Book my free mock test</button><p id="ok" role="status"></p></form>
+</div>
+</section>
+<div class="ft"><span>&copy; <span data-c="name"></span>. IELTS is a registered trademark of its owners.</span><span data-c="city"></span></div>
+</div>
+</div>
+
+<script>
+/* EDIT THESE DETAILS FOR EACH CLIENT */
+var C={name:"BandUp IELTS Academy",city:"Your City",phone:"+00 000 000 0000",email:"hello@yourcentre.com",address:"123 Main Street, Your City"};
+var $=function(s){return document.querySelector(s)};
+document.querySelectorAll("[data-c]").forEach(function(e){e.textContent=C[e.dataset.c]});
+document.title=C.name+" | IELTS Coaching in "+C.city;
+
+/* band selector */
+var W={"6.0":"6–8 weeks","6.5":"8 weeks","7.0":"8–10 weeks","7.5":"10–12 weeks","8.0":"12+ weeks"},chips=$(".chips");
+Object.keys(W).forEach(function(b){var x=document.createElement("button");x.textContent=b;x.setAttribute("aria-pressed",b=="7.0");x.onclick=function(){chips.querySelectorAll("button").forEach(function(k){k.setAttribute("aria-pressed",k==x)});$("#tb").firstChild.nodeValue=b;$("#wk").textContent=W[b]};chips.appendChild(x)});
+
+/* airplane on a path */
+var rest=$("#rest"),done=$("#done"),plane=$("#plane"),svg=$("#fly"),page=$("#page"),L=1,clouds=document.querySelectorAll(".cl"),mw=1000;
+function build(){
+ var w=page.clientWidth,h=page.clientHeight;mw=w;svg.setAttribute("width",w);svg.setAttribute("height",h);
+ var n=Math.max(2,Math.round(h/560)),xs=[w*.88,w*.1],px=xs[0],py=90,d="M"+px+","+py;
+ for(var i=1;i<=n;i++){var x=xs[i%2],y=90+(h-300)*i/n,m=(py+y)/2;d+="C"+px+","+m+" "+x+","+m+" "+x+","+y;px=x;py=y}
+ rest.setAttribute("d",d);done.setAttribute("d",d);L=rest.getTotalLength();
+ done.style.strokeDasharray=L;upd();
+}
+function upd(){
+ var mx=document.documentElement.scrollHeight-innerHeight,p=mx>0?Math.min(1,Math.max(0,scrollY/mx)):0,l=p*L,
+ a=rest.getPointAtLength(Math.max(0,l-5)),b=rest.getPointAtLength(Math.min(L,l+5)),q=rest.getPointAtLength(l),
+ r=Math.atan2(b.y-a.y,b.x-a.x)*180/Math.PI;
+ plane.style.transform="translate("+q.x+"px,"+q.y+"px) rotate("+r+"deg)";
+ done.style.strokeDashoffset=L-l;
+ clouds.forEach(function(c){var s=+c.dataset.s,x=((s*scrollY+(s>0?0:mw))%(mw+500)+mw+500)%(mw+500)-250;c.style.translate=x+"px 0"});
+}
+var t;addEventListener("scroll",function(){cancelAnimationFrame(t);t=requestAnimationFrame(upd)},{passive:true});
+addEventListener("resize",build);addEventListener("load",build);build();
+if(window.ResizeObserver)new ResizeObserver(build).observe(page);
+
+/* count-up stats */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);
+ var el=e.target,n=+el.dataset.n,dc=+el.dataset.d||0,x=el.dataset.x||"",s=performance.now();
+ (function f(now){var k=Math.min(1,(now-s)/1400),v=n*(1-Math.pow(1-k,3));el.textContent=(dc?v.toFixed(dc):Math.round(v).toLocaleString())+x;if(k<1)requestAnimationFrame(f)})(s)})},{threshold:.6});
+document.querySelectorAll("[data-n]").forEach(function(e){io.observe(e)});
+
+$("#f").addEventListener("submit",function(e){e.preventDefault();$("#ok").textContent="Seat reserved. We will call you within 24 hours.";e.target.reset()});
+</script>
+</body>
+</html>
